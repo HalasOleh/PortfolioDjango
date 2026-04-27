@@ -1,4 +1,4 @@
-# <назва>
+# Movie Watchlist
 
 Minimal Django app for managing a personal movie watchlist: create movies, assign genres, and track watch status in a user dashboard.
 
