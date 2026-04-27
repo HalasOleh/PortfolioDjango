@@ -1,0 +1,16 @@
+<ul class="sidebar-nav">
+  <li>
+    <a href="{% url "movie_watchlist:home" %}">Home</a>
+  </li>
+  {% if user.is_authenticated %}
+    <li>
+      <a href="{% url "movie_watchlist:dashboard" %}">Dashboard</a>
+    </li>
+  {% endif %}
+  <li>
+    <a href="{% url "movie_watchlist:movie_list" %}">All movie</a>
+  </li>
+  <li>
+    <a href="{% url "movie_watchlist:genre_list" %}">All genre</a>
+  </li>
+</ul>

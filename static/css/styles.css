@@ -1,0 +1,192 @@
+/* App theme overrides for Bootstrap 5 */
+
+:root {
+  --app-bg: #0b1220;
+  --app-surface: rgba(255, 255, 255, 0.06);
+  --app-surface-2: rgba(255, 255, 255, 0.08);
+  --app-border: rgba(255, 255, 255, 0.10);
+  --app-text: rgba(255, 255, 255, 0.92);
+  --app-muted: rgba(255, 255, 255, 0.70);
+  --app-link: #86b7ff;
+  --app-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  color: var(--app-text);
+  background:
+    radial-gradient(1200px 600px at 15% 10%, rgba(59, 130, 246, 0.25), transparent 50%),
+    radial-gradient(1000px 500px at 85% 0%, rgba(168, 85, 247, 0.20), transparent 55%),
+    radial-gradient(900px 500px at 70% 85%, rgba(34, 197, 94, 0.12), transparent 55%),
+    var(--app-bg);
+}
+
+a {
+  color: var(--app-link);
+  text-decoration: none;
+}
+
+a:hover {
+  color: #b4d0ff;
+  text-decoration: underline;
+}
+
+/* Layout */
+.container-fluid {
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+}
+
+/* Navbar */
+.navbar.bg-dark {
+  background: rgba(10, 15, 25, 0.70) !important;
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--app-border);
+}
+
+.navbar .navbar-brand {
+  letter-spacing: 0.2px;
+}
+
+/* Sidebar */
+.sidebar-nav {
+  list-style: none;
+  padding: 0.75rem;
+  margin: 0;
+  position: sticky;
+  top: 1rem;
+  background: var(--app-surface);
+  border: 1px solid var(--app-border);
+  border-radius: 0.75rem;
+  box-shadow: var(--app-shadow);
+}
+
+.sidebar-nav li + li {
+  margin-top: 0.35rem;
+}
+
+.sidebar-nav a {
+  display: block;
+  padding: 0.55rem 0.65rem;
+  border-radius: 0.6rem;
+  color: var(--app-text);
+  text-decoration: none;
+}
+
+.sidebar-nav a:hover {
+  background: var(--app-surface-2);
+  text-decoration: none;
+}
+
+/* Content surfaces */
+.card,
+.table-responsive {
+  background: var(--app-surface);
+  border: 1px solid var(--app-border);
+  border-radius: 0.9rem;
+  box-shadow: var(--app-shadow);
+}
+
+.card .card-body {
+  color: var(--app-text);
+}
+
+.text-muted {
+  color: var(--app-muted) !important;
+}
+
+/* Tables */
+.table {
+  color: var(--app-text);
+  margin-bottom: 0;
+}
+
+.table thead.table-dark th {
+  background: rgba(0, 0, 0, 0.45) !important;
+  border-color: rgba(255, 255, 255, 0.12) !important;
+}
+
+.table td,
+.table th {
+  border-color: rgba(255, 255, 255, 0.10);
+}
+
+.table-hover tbody tr:hover {
+  background: rgba(255, 255, 255, 0.04);
+}
+
+/* Forms */
+.form-control,
+.form-select {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  color: var(--app-text);
+}
+
+.form-control:focus,
+.form-select:focus {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(134, 183, 255, 0.75);
+  box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.20);
+  color: var(--app-text);
+}
+
+label.form-label {
+  color: var(--app-text);
+}
+
+/* CheckboxSelectMultiple */
+ul[id^="id_"] {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 0;
+}
+
+ul[id^="id_"] li {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.25rem 0;
+}
+
+ul[id^="id_"] input[type="checkbox"] {
+  width: 1.05rem;
+  height: 1.05rem;
+}
+
+/* Buttons */
+.btn {
+  border-radius: 0.75rem;
+}
+
+.btn-outline-light {
+  border-color: rgba(255, 255, 255, 0.35);
+}
+
+/* Alerts */
+.alert {
+  border-radius: 0.9rem;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  background: rgba(255, 255, 255, 0.06);
+  color: var(--app-text);
+}
+
+.alert .btn-close {
+  filter: invert(1);
+}
+
+/* Small polish */
+h1, h2, h3 {
+  letter-spacing: 0.2px;
+}
+
+@media (max-width: 575.98px) {
+  .sidebar-nav {
+    position: static;
+    margin-bottom: 1rem;
+  }
+}

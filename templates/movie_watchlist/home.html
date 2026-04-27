@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+<h1>Home Page</h1>
+
+<p>Total movies: {{ num_movies }}</p>
+<p>Total genres: {{ num_genres }}</p>
+
+<h2>Watched</h2>
+<ul>
+    {% for item in watched_list %}
+        <li>{{ item }}</li>
+    {% endfor %}
+</ul>
+{% endblock %}

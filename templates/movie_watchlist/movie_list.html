@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block title %}All movie{% endblock %}
+{% block content %}
+<h1>Movie Library</h1>
+{% if movie_list %}
+  <ul>
+    {% for movie in movie_list %}
+      <li>
+        <a href="{% url 'movie_watchlist:movie_detail' movie.pk %}">{{ movie.title }}</a>
+        ({{ movie.release_year }})
+        {% if movie.description %}
+          <div class="text-muted small">{{ movie.description }}</div>
+        {% endif %}
+      </li>
+    {% endfor %}
+  </ul>
+  {% endif %}
+{% endblock %}
+
