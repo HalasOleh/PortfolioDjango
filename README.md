@@ -46,10 +46,8 @@ ALLOWED_HOSTS=127.0.0.1,localhost
 
 ## Screenshots
 
-- TODO: add screenshots here
+<img width="1919" height="1030" alt="image" src="https://github.com/user-attachments/assets/2b6d38bb-be21-4bff-818a-5d14dd6f1b52" />
+<img width="1898" height="1012" alt="image" src="https://github.com/user-attachments/assets/0b650fb2-90ff-4124-a92e-2e07a939e2c0" />
+<img width="1919" height="1025" alt="image" src="https://github.com/user-attachments/assets/d2de7030-8516-4bd3-a3d6-fa65c14aad15" />
 
-## Author
-
-- OpenAI (Codex CLI assistant)
-- GitHub: https://github.com/openai
 
